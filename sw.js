@@ -1,5 +1,5 @@
 // NWS 採点アプリ：オフラインで動かすためのキャッシュ。患者データは扱わない（記録はiPadのブラウザ内にのみ保存）。
-const CACHE = 'nws6-app-v1.0.1';
+const CACHE = 'nws6-app-v1.0.2';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-512.png'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => {
